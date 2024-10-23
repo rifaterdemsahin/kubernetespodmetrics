@@ -129,6 +129,12 @@ graph TD
     4. **Verify Network Policies:**
         Ensure there are no network policies blocking the Metrics Server from communicating with the kubelets.
 
+    5. **Edit Deployment
+        kubectl edit deployment metrics-server -n kube-system
+        In the editor, find the containers section and add the following arguments under args:
+        args:
+        - --kubelet-insecure-tls
+
     ### Restart Metrics Server Deployment
 
     If all configurations are correct and the issue persists, consider restarting the Metrics Server deployment:
