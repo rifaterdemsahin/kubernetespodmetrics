@@ -5,6 +5,8 @@ metadata:
   namespace: kube-system
 spec:
   selector:
+    k8s-app: metrics-server
+  selector:
     matchLabels:
       k8s-app: metrics-server
   template:

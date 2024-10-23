@@ -8,3 +8,5 @@ if [ $? -eq 0 ]; then
 else
     echo "Failed to apply symbol-metric-server.yaml"
 fi
+
+kubectl top pod
