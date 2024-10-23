@@ -1,2 +1,5 @@
 minikube enviroment
-see top running pods
+🚀 **See Top Running Pods** 🚀
+
+minikube start
+minikube stop
