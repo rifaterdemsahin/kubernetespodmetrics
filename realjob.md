@@ -15,4 +15,4 @@ minikube start
 kubectl get top pods
 ```
 
-git pull; git add . && git commit -m "Codespaces mini environment files" && git push;clear.exe 
+git pull; git add . && git commit -m "Codespaces mini environment files" && git push;clear
