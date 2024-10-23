@@ -1,4 +1,4 @@
-
+```mermaid
 graph TD
     A[imaginary.md - Oct 23 15:06] --> B[realjob.md - Oct 23 15:07]
     B --> C[formula.md - Oct 23 15:08]
@@ -23,7 +23,7 @@ graph TD
     T1 --> T2[realResult.png - Oct 23 16:04]
     S --> U1[semblance_solve_by_edit.png - Oct 23 16:07]
     U1 --> U2[semblance_insecure_tls.png - Oct 23 16:08]
-
+```
 
     # Kubernetes Pod Metrics Journey
 
