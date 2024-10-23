@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metrics-server
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      k8s-app: metrics-server
+  template:
+    metadata:
+      labels:
+        k8s-app: metrics-server
+    spec:
+      securityContext:
+        fsGroup: 2000
+      containers:
+        - name: metrics-server
+          image: k8s.gcr.io/metrics-server/metrics-server:v0.6.2
+          args:
+            - --kubelet-insecure-tls
+          ports:
+            - containerPort: 443
+              protocol: TCP
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 3000
+          volumeMounts:
+            - name: tmp-cert-storage
+              mountPath: /apiserver.local.config
+      volumes:
+        - name: tmp-cert-storage
+          emptyDir: {}
